@@ -1,0 +1,27 @@
+<form class="mt-5">
+    <div class="mb-3">
+        <select class="form-select" #cine_id name="cine_id" aria-label="Default select example">
+            <option selected>Seleccione tipo de Usuario</option>
+            @for (item of datocine; track $index) {
+                <option value="{{item.id}}">{{item.nombre}}</option>  
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+
+        <input type="text" class="form-control" #numeroHabitacion name="numeroHabitacion" id="numeroHabitacion" placeholder="Usuario">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" #numeroAsientos name="numeroAsientos" id="numeroAsientos" placeholder="numeroAsientos">
+    </div>
+    <div class="mb-3">
+
+        <input type="text" class="form-control" #pelicula name="pelicula" id="pelicula" placeholder="pelicula">
+    </div>
+    <button class="btn btn-primary" type="button" (click)="registrar(numeroHabitacion,numeroAsientos,pelicula,cine_id)">Registrar</button>
+</form>
+  
+
+
+
+

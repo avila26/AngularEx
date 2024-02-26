@@ -1,0 +1,19 @@
+<form action="">
+
+    <div class="mb-3">
+        <select class="form-select" #cine_id name="cine_id" aria-label="Default select example">
+            <option selected>Seleccione tipo de Usuario</option>
+            @for (item of datocine; track $index) {
+                <option value="{{item.id}}">{{item.nombre}}</option>  
+            }
+        </select>
+    </div>
+
+
+
+
+    <div>
+<label for="">Ingrese la cantidad de asientos a reservar</label>
+<input type="text">
+    </div>
+</form>
